@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 0 0 12px 0;
+      color: #1a1a1a;
+    }
+    .info {
+      background: #e3f2fd;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #1565c0;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .info a {
+      color: #1565c0;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #5f6368;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 13px;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+    button {
+      width: 100%;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    button:hover {
+      background: #1557b0;
+    }
+    .status {
+      margin-top: 12px;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .success {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .error {
+      background: #ffebee;
+      color: #c62828;
+    }
+    .note {
+      background: #fff3e0;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #e65100;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h2>👁️ Logo Detection Setup</h2>
+  
+  <div class="info">
+    <strong>Get your API keys:</strong><br>
+    <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a> (Vision API)<br>
+    <a href="https://www.brandfetch.com/api" target="_blank">Brandfetch</a> (Optional)
+  </div>
+  
+  <div class="section">
+    <label for="googleApiKey">Google Cloud Vision API Key:</label>
+    <input type="password" id="googleApiKey" placeholder="AIza...">
+  </div>
+
+  <div class="section">
+    <label for="brandfetchKey">Brandfetch API Key (Optional):</label>
+    <input type="password" id="brandfetchKey" placeholder="For enhanced company data">
+  </div>
+  
+  <button id="saveBtn">Save Configuration</button>
+  
+  <div id="status" style="display: none;"></div>
+
+  <div class="note">
+    <strong>Free Tier:</strong> 1,000 logo detections/month with Google Cloud Vision. Additional detections cost $1.50 per 1,000.
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
