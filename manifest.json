@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Company Info - Logo Detection",
+  "version": "1.0.0",
+  "description": "Detects company logos and shows firmographic information",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://vision.googleapis.com/*",
+    "https://api.brandfetch.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["tooltip.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
